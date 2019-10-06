@@ -60,7 +60,37 @@
 							<section id="CV">
 								<div class="container">
 									<h3>My CV</h3>
-									<p> Current Position: Post-doc at SAF (Sciences Actuarielle et Financière) Laboratory in Behavioral Economics applied to insurance, health and prevention</p>									
+									<table style="width: 100%; font-size: 16px;">
+        <tbody>
+        <tr>
+            <td>Période</td>
+              <td>Votre richesse </br>(pouvant subir une perte): </td>
+            <td>Votre contrat d'assurance :</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    <th:block th:text="${licensingAndFraud.roundNumber}"/>
+                    /
+                    <th:block th:text="${roundCount}"/>
+                </h3>
+            </td>
+            <td><span th:text="${licensingAndFraud.wealth}"/></td>
+            <td>
+                Prime (payée chaque période):
+                <th:block th:text="${licensingAndFraud.commercialPremium}"/>
+                <br/>
+                Franchise (déduite du remboursement):
+                <th:block th:text="${licensingAndFraud.deductible}"/>
+            </td>
+            <td>
+               <strong> Sur 10 périodes, il arrive en moyenne 2 pertes </strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+									<p> <strong>My current position</strong>: Post-doc at SAF (Sciences Actuarielle et Financière) Laboratory in Behavioral Economics applied to insurance, health and prevention.</p>									
 <p style="text-align:left;"><strong>Education</strong>
 </br>
 								
